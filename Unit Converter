@@ -1,0 +1,30 @@
+# Unit-Converter
+print("1.Length\n2.Weight\n3.Temperature")
+opt = input("Choose (1/2/3): ")
+
+if opt == '1':
+    v = float(input("Enter value: "))
+    u = input("From (km/mile): ")
+    if u == 'km':
+        print(f"{v} km = {v * 0.621371:.2f} miles")
+    else:
+        print(f"{v} miles = {v / 0.621371:.2f} km")
+
+elif opt == '2':
+    v = float(input("Enter value: "))
+    u = input("From (kg/lb): ")
+    if u == 'kg':
+        print(f"{v} kg = {v * 2.20462:.2f} lbs")
+    else:
+        print(f"{v} lbs = {v / 2.20462:.2f} kg")
+
+elif opt == '3':
+    v = float(input("Enter temperature: "))
+    u = input("From (C/F): ")
+    if u == 'C':
+        print(f"{v}°C = {(v * 9/5) + 32:.2f}°F")
+    else:
+        print(f"{v}°F = {(v - 32) * 5/9:.2f}°C")
+
+else:
+    print("Invalid choice.")
